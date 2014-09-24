@@ -1,13 +1,13 @@
-{ "name": "connect-busboy",
-  "version": "0.0.1",
-  "author": "Brian White <mscdex@mscdex.net>",
-  "description": "Connect middleware for busboy",
+{ "name": "connect-busbuddy",
+  "version": "0.0.2",
+  "author": "andrezzoid <andre.jonas@gmail.com>",
+  "description": "Connect middleware for busboy that abstracts you from all that boilerplate code",
   "main": "./index",
   "dependencies": {
     "busboy": "*"
   },
   "engines": { "node": ">=0.8.0" },
-  "keywords": [ "connect", "middleware", "uploads", "forms", "multipart", "form-data" ],
-  "licenses": [ { "type": "MIT", "url": "http://github.com/mscdex/connect-busboy/raw/master/LICENSE" } ],
-  "repository" : { "type": "git", "url": "http://github.com/mscdex/connect-busboy.git" }
+  "keywords": [ "connect", "middleware", "uploads", "forms", "multipart", "form-data", "express" ],
+  "licenses": [ { "type": "MIT", "url": "https://github.com/andrezzoid/connect-busbuddy/blob/master/LICENSE" } ],
+  "repository" : { "type": "git", "url": "https://github.com/andrezzoid/connect-busbuddy.git" }
 }
