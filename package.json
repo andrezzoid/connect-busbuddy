@@ -1,5 +1,5 @@
 { "name": "connect-busbuddy",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "andrezzoid <andre.jonas@gmail.com>",
   "description": "Connect middleware for busboy that abstracts you from all that boilerplate code",
   "main": "./index",
