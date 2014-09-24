@@ -13,44 +13,31 @@ Requirements
 
 Install
 ============
-
-    npm install connect-busboy
+```
+npm install connect-busbuddy
+```
 
 
 Example
 =======
 
 ```javascript
-var busboy = require('connect-busboy');
+var busbuddy = require('connect-busbuddy');
 
 // default options, no immediate parsing
-app.use(busboy());
+app.use(busbuddy());
 // ...
 app.use(function(req, res) {
-  req.busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
-    // ...
-  });
-  req.busboy.on('field', function(key, value, keyTruncated, valueTruncated) {
-    // ...
-  });
-  req.pipe(req.busboy);
-  // etc ...
+    var prop = req.body['my-input'];
+    
+    var file = req.files['my-file'].file;
+    var filename = req.files['my-file'].filename;
+	var dst = fs.createWriteStream('./uploads/' + filename);
+	file.pipe(dst);
 });
+```
 
-// default options, immediately start reading from the request stream and
-// parsing
-app.use(busboy({ immediate: true }));
-// ...
-app.use(function(req, res) {
-  req.busboy.on('file', function(fieldname, file, filename, encoding, mimetype) {
-    // ...
-  });
-  req.busboy.on('field', function(key, value, keyTruncated, valueTruncated) {
-    // ...
-  });
-  // etc ...
-});
-
+```javascript
 // any valid Busboy options can be passed in also
 app.use(busboy({
   highWaterMark: 2 * 1024 * 1024,
@@ -60,3 +47,8 @@ app.use(busboy({
 }));
 
 ```
+
+Licence
+=======
+
+MIT - https://github.com/andrezzoid/connect-busbuddy/blob/master/LICENSE
